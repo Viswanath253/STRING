@@ -1,0 +1,13 @@
+def p(s):
+    c= set()
+    l = 0
+    m = 0
+    for i in range(len(s)):
+        while s[i] in c:
+            c.remove(s[l])
+            l+=1
+        c.add(s[i])
+        m = max(m,i-l+1)
+    return m
+s="abcabcbb" 
+print(p(s))
